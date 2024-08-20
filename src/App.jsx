@@ -31,25 +31,56 @@ const arr = [
   },
 
 ]
-function App() {
-  let Students = arr.map((person, i) => {
-    return <tr key={i}>
-      <td>{i}</td>
-      <td>{person.name}</td>
-      <td>{person.class}</td>
+// function App() {
+
+//   const Students = arr.map((persons,index) =>{
+//     return <tr key={index}>
+//       <td>{index + 1}</td>
+//     <td>{persons.name}</td>
+//     <td>{persons.class}</td>
+//     </tr>
+
+//   })
+
+//   return (
+//     <div>
+//       <h1>{name}</h1>
+//       <table>
+//         <td>S No</td>
+//         <td>Name</td>
+//         <td>Class</td>
+//         {Students}
+//       </table>
+//     </div>
+//   )
+// }
+
+function app() {
+  const Students = arr.map((persons, index) => {
+    return <tr key={index}>
+      <td>
+        {index + 1}
+      </td>
+      <td>
+        {persons.name}
+      </td>
+      <td>
+        {persons.class}
+      </td>
     </tr>
   })
   return (
     <div>
-      <h1>{name}</h1>
       <table>
-        <td>S No</td>
-        <td>Name</td>
-        <td>Class</td>
-        {Students}
+      <td>Sno</td>
+      <td>Name</td>
+      <td>Class</td>
+      {Students}
       </table>
     </div>
+   
   )
 }
 
-export default App;
+export default app;
+
